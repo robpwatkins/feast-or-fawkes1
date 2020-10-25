@@ -4,13 +4,14 @@ const Tester = () => {
   const [word, setWord] = useState(null);
 
   const handleClick = () => {
-    // fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
-    //   "method": "GET",
-    //   "headers": {
-    //     "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
-    //     "x-rapidapi-key": "bf932fb55cmsh5fdfe8a4b7b70f6p14096djsnbc2ed101a881"
-    //   }
-    // })
+    const API_KEY = process.env.REACT_APP_API_KEY
+    fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "wordsapiv1.p.rapidapi.com",
+        "x-rapidapi-key": `${API_KEY}`
+      }
+    })
     .then(response => response.json())
     .then(data => setWord(data.word))
     .catch(err => {
