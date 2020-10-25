@@ -1,7 +1,7 @@
-import React, { /* useState */ } from 'react';
+import React, { useState } from 'react';
 
 const Tester = () => {
-  // const [word, setWord] = useState('null');
+  const [word, setWord] = useState(null);
 
   const handleClick = () => {
     fetch("https://wordsapiv1.p.rapidapi.com/words/?random=true", {
@@ -12,7 +12,7 @@ const Tester = () => {
       }
     })
     .then(response => response.json())
-    .then(data => console.log(data.word))
+    .then(data => setWord(data.word))
     .catch(err => {
       console.log(err);
     });
@@ -21,7 +21,7 @@ const Tester = () => {
   return (
     <div>
       <button onClick={handleClick}>CLICK ME!</button>
-      <h3>Tester, here.</h3>
+      <h3>{word}</h3>
     </div>
   )
 }
