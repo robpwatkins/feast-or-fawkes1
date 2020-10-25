@@ -13,7 +13,12 @@ const Tester = () => {
       }
     })
     .then(response => response.json())
-    .then(data => setWord(data.word))
+    .then(data => {
+      console.log(data.frequency);
+      if (data.frequency && data.frequency > 5) {
+        setWord(data.word)
+      }
+    })
     .catch(err => {
       console.log(err);
     });
