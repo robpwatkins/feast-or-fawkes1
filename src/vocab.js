@@ -1,4 +1,4 @@
-export const words = [
+const words = [
   'acorns',
   'America',
   'apple pie',
@@ -94,3 +94,5 @@ export const words = [
   'wishbone',
   'yams'
 ]
+
+module.exports = { words }
