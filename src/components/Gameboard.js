@@ -5,8 +5,8 @@ const Tester = () => {
   const [word, setWord] = useState(null);
 
   const wordGetter = () => {
-    let newWord = words.splice(0, 1)
-    setWord(newWord)
+    setWord(words.splice(Math.floor(Math.random() * words.length), 1)[0]);
+    console.log(words.length);
   }
 
   const handleClick = () => {
