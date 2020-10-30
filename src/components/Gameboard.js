@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { words } from '../vocab';
 
 const Gameboard = () => {
-  const [word, setWord] = useState(null);
+  const [word, setWord] = useState([]);
 
   const wordGetter = () => {
     setWord(words.splice(Math.floor(Math.random() * words.length), 1)[0].split(''));
@@ -14,9 +14,18 @@ const Gameboard = () => {
 
   console.log(word);
   return (
-    <div>
+    <div className="everything">
       <button onClick={handleClick}>CLICK ME!</button>
-      {}
+      <div className="space-container">
+      {word.map((letter, i) => {
+        return(
+            <div
+              key={i}
+              className="space"
+            ></div>
+            )
+          })}
+      </div>
     </div>
   )
 }
