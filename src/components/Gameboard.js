@@ -19,21 +19,11 @@ const Gameboard = () => {
       <h3>{word}</h3>
       <div className="space-container">
       {word.map((char, i) => {
-        console.log(char)
-        if (char !== ' ') {
-          return(
-            <div
-              key={i}
-              className="letter"
-            ></div>
-          )
-        } else
-        return(
-            <div
-              key={i}
-              className="space"
-            ></div>
-            )
+        return (
+          char === ' ' 
+          ? <div key={i} className="space"></div>
+          : <div key={i} className="letter"></div>
+        )
           })}
       </div>
     </div>
