@@ -1,13 +1,13 @@
 .App {
   text-align: center;
-  background-color: #282c34;
+  background-color: whitesmoke;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: #282c34;
 }
 
 .everything {
@@ -15,14 +15,20 @@
 }
 
 .space-container {
-  /* width: 100%; */
+  width: 100%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 100px;
 }
 
+.letter {
+  width: 5%;
+  margin: 0 10px;
+  border-bottom: 2px solid #282c34;
+}
+
 .space {
-  width: 50px;
-  border-bottom: 2px solid white;
+  width: 5%;
+  border-bottom: none;
 }

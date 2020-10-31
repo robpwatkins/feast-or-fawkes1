@@ -16,8 +16,18 @@ const Gameboard = () => {
   return (
     <div className="everything">
       <button onClick={handleClick}>CLICK ME!</button>
+      <h3>{word}</h3>
       <div className="space-container">
-      {word.map((letter, i) => {
+      {word.map((char, i) => {
+        console.log(char)
+        if (char !== ' ') {
+          return(
+            <div
+              key={i}
+              className="letter"
+            ></div>
+          )
+        } else
         return(
             <div
               key={i}
