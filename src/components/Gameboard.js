@@ -21,9 +21,7 @@ const Gameboard = () => {
   }
 
   useEffect(() => {
-    document.body.addEventListener('keyup', event => {
-      handleKeyUp(event);
-    })
+    document.body.addEventListener('keyup', handleKeyUp);
   })
 
   console.log(word, correctGuesses);
