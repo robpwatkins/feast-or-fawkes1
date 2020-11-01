@@ -24,7 +24,7 @@ const Gameboard = () => {
     document.body.addEventListener('keyup', event => {
       handleKeyUp(event);
     })
-  })
+  }, [])
 
   console.log(word, correctGuesses);
   return (
